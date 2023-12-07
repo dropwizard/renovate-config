@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":automergePatch",
+    ":automergePr",
+    ":automergeRequireAllStatusChecks",
+    ":prConcurrentLimitNone",
+    ":separatePatchReleases",
+    "group:recommended",
+    "schedule:daily"
+  ],
+  "baseBranches": ["release/2.1.x", "release/3.0.x", "release/4.0.x", "release/5.0.x"],
+  "dependencyDashboard": true,
+  "labels": ["dependencies"],
+  "platformAutomerge": true,
+  "reviewers": ["team:committers"],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "assignees": ["team:committers"]
+  }
+}
