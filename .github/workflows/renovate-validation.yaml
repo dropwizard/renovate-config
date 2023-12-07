@@ -1,0 +1,27 @@
+---
+name: renovate-config-validator
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
+  validate-presets:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config_file_path:
+          - default.json
+    steps:
+      - uses: actions/checkout@v2
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
+        with:
+          config_file_path: ${{ matrix.config_file_path }}
