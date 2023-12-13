@@ -6,6 +6,7 @@
     ":automergePr",
     ":automergeRequireAllStatusChecks",
     ":prConcurrentLimitNone",
+    ":separateMultipleMajorReleases",
     ":separatePatchReleases",
     "group:recommended",
     "schedule:daily"
