@@ -19,7 +19,7 @@
     {
       "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions",
-      "groupSlug": "github-actions",
+      "groupSlug": "github-actions"
     },
     {
       "groupName": "Maven plugins",
