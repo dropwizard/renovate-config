@@ -6,6 +6,7 @@
     ":automergePatch",
     ":automergePr",
     ":automergeRequireAllStatusChecks",
+    ":enableVulnerabilityAlertsWithLabel(security)",
     ":prConcurrentLimitNone",
     ":prHourlyLimitNone",
     ":separateMultipleMajorReleases",
@@ -30,9 +31,5 @@
     }
   ],
   "platformAutomerge": true,
-  "reviewers": ["team:committers"],
-  "vulnerabilityAlerts": {
-    "labels": ["security"],
-    "assignees": ["team:committers"]
-  }
+  "reviewers": ["team:committers"]
 }
